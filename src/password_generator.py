@@ -42,16 +42,3 @@ class PasswordGenerator:
                 return False
 
         return True
-
-
-pg = PasswordGenerator()
-
-
-for i in range(10):
-    if i == 5:
-        new_pass = pg.generate(10) + r"\\\\\\"
-        print(new_pass, pg.validate(new_pass))
-        continue
-    new_pass = pg.generate(16)
-    pass_val = pg.validate(new_pass)
-    print(new_pass, pass_val)
